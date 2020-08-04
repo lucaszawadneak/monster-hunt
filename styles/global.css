@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing-: antialiased;
+  background-color: #fff;
+}
+body,
+input,
+button,
+textarea,
+p,
+labe,
+strong {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+button,
+a {
+  cursor: pointer;
+}

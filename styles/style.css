@@ -1,0 +1,134 @@
+.header {
+  padding: 20px;
+  margin: 20px 40px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-weight: 400;
+  font-style: italic;
+}
+
+h2 {
+  font-weight: bold;
+  margin: 20px;
+  color: #000;
+  text-align: center;
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 15px;
+  width: 300px;
+  height: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.normal::-webkit-progress-value {
+  border-radius: 2px;
+  background-color: #44af69;
+  transition: 300ms;
+}
+
+.danger::-webkit-progress-value {
+  border-radius: 2px;
+  background-color: #d72638;
+  transition: 300ms;
+}
+
+button {
+  padding: 15px;
+  outline: 0px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 3px;
+  margin: 5px;
+  transition: 300ms;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.menu {
+  padding: 20px;
+  margin: 20px 40px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gameLog {
+  padding: 20px;
+  margin: 20px 40px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playerHit {
+  background-color: #48a9a6;
+  align-self: stretch;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.monsterHit {
+  background-color: #c1666b;
+  align-self: stretch;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.gameLog h3 {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  margin-bottom: 5px;
+  transition: 300ms;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.dev {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Matador de Monstros</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="dev">
+        <a href="https://lucaszawadneak.me">Lucas Zawadneak - 2020</a>
+        <a href="https://github.com/lucaszawadneak/monster-hunt"
+          >Veja o código</a
+        >
+      </div>
+      <div class="header">
+        <div>
+          <h1>Jogador</h1>
+          <progress
+            :value="playerHP"
+            max="100"
+            id="playerHealth"
+            :class="{danger:playerDanger,normal: !playerDanger}"
+          ></progress>
+          <label for="playerHealth"> {{ playerHP }}% </label>
+        </div>
+        <div>
+          <h1>Monstro</h1>
+          <progress
+            :value="monsterHP"
+            max="100"
+            id="monsterHealth"
+            :class="{danger:monsterDanger,normal: !monsterDanger}"
+          ></progress>
+          <label for="monsterHealth"> {{ monsterHP }}% </label>
+        </div>
+      </div>
+      <h2 v-if="victory">VOCÊ GANHOU!</h2>
+      <h2 v-if="defeat">VOCÊ PERDEU!</h2>
+      <div class="menu" v-if="gameOnCourse">
+        <button
+          type="button"
+          name="attack"
+          style="background-color: #d72638;"
+          @click="handleAttack"
+        >
+          ATACAR
+        </button>
+        <button
+          type="button"
+          name="specialAttack"
+          style="background-color: #fcab10;"
+          @click="handleSpecialAttack"
+        >
+          ATAQUE ESPECIAL ({{ specialAttacks }})
+        </button>
+        <button
+          type="button"
+          name="heal"
+          style="background-color: #44af69;"
+          @click="heal"
+        >
+          DESCANSAR
+        </button>
+        <button
+          type="button"
+          name="quit"
+          style="background-color: #aeb4a9;"
+          @click="startGame"
+        >
+          {{ victory || defeat ? 'REINICIAR':'DESISTIR'}}
+        </button>
+      </div>
+      <div class="menu" v-else>
+        <button
+          type="button"
+          name="heal"
+          style="background-color: #aeb4a9;"
+          @click="startGame"
+        >
+          INICIAR JOGO
+        </button>
+      </div>
+      <div class="gameLog" v-show="battleLog[0]">
+        <template v-for="item in battleLog">
+          <div :class="{playerHit: item.type,monsterHit: !item.type}">
+            <h3>{{ item.message }}</h3>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
