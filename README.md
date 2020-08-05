@@ -1,6 +1,6 @@
 ##  :japanese_ogre: Monster Hunt 
 
-Mini game developed with VueJS. This minigame one of many challenges of my VueJS learning process
+Mini game developed with VueJS. This minigame is one of many challenges of my VueJS learning process
 
 This small project was developed using *VueJS script*, and not it's CLI.
 
